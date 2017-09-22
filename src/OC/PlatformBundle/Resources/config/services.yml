@@ -15,6 +15,9 @@ services:
       tags:
           - { name: twig.extension }
 
+  oc_platform.beta.html_adder:
+      class: OC\PlatformBundle\Beta\BetaHTMLAdder
+
   oc_platform.email.application_mailer:
       class: OC\PlatformBundle\Email\ApplicationMailer
       arguments:
