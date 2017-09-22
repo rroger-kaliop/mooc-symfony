@@ -8,6 +8,13 @@ services:
           - %locale%
           - 50
 
+  oc_platform.twig.antispam_extension:
+      class: OC\PlatformBundle\Twig\AntispamExtension
+      arguments:
+          - "@oc_platform.antispam"
+      tags:
+          - { name: twig.extension }
+
   oc_platform.email.application_mailer:
       class: OC\PlatformBundle\Email\ApplicationMailer
       arguments:
