@@ -1,8 +1,8 @@
 <?php
 // app/AppKernel.php
 
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
+use Symfony\Component\HttpKernel\Kernel;
 
 class AppKernel extends Kernel
 {
@@ -19,6 +19,8 @@ class AppKernel extends Kernel
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new OC\PlatformBundle\OCPlatformBundle(),
             new OC\CoreBundle\OCCoreBundle(),
+            new OC\UserBundle\OCUserBundle(),
+            new FOS\UserBundle\FOSUserBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
